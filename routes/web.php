@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [EventController::class, 'index'])->name('site.home');
 
 Route::get('events/create', [EventController::class, 'create'])->name('site.create');
+Route::post('events/create', [EventController::class, 'store'])->name('site.create.post');
+
+Route::get('events/show/{event}', [EventController::class, 'show'])->name('site.show');
