@@ -9,9 +9,17 @@ class EventController extends Controller
 {
     public function index()
     {
-        $events = Event::get();
+        $search = request('search');
 
-        return view('home/index', ['events' => $events]);
+        if ($search) {
+            $events = Event::where([
+                ['title', 'like', '%'.$search.'%'],
+            ])->get();
+        } else {
+            $events = Event::get();
+        }
+
+        return view('home/index', ['events' => $events, 'search' => $search]);
     }
 
     public function create()
