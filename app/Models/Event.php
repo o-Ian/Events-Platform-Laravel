@@ -14,5 +14,16 @@ class Event extends Model
         'description',
         'city',
         'private',
+        'image',
+        'items',
+        'date',
+    ];
+
+    protected $casts = [
+        'items' => 'array',
+    ];
+
+    protected $dates = [
+        'date',
     ];
 }

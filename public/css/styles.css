@@ -4,3 +4,91 @@
 .logo{
     width: 50px;
 }
+
+body{
+    min-height: 100vw;
+    padding-bottom: 100px;
+    position: relative;
+    
+}
+
+header{
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+.row{
+    margin: 0;
+}
+.container-fluid{
+    padding: 0;
+}
+.btn-primary{
+    background-color: #f2a340;
+    border: 2px solid #c28008;
+}
+.btn-primary:hover{
+    background-color: #c28008;
+    border-color: #c28008;
+}
+#navbar img{
+    width: 40px;
+}
+#navbar{
+    justify-content: space-between;
+    background-color: #fff;
+
+}
+#navbar a{
+    font-size: 14px;
+    color: #757575;
+}
+#navbar a:hover{
+    color: #f2a340;
+}
+#search-container{
+    background-image: url('../img/800px-Plateia_do_TCA_no_espetáculo_Corpo_Vivo_-_Carrosel_das_Espécies.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    padding: 50px;
+    text-align: center;
+
+}
+
+#search-container h1{
+    color: #f2a340;
+    margin-bottom: 30px;
+    font-weight: 900;
+
+}
+
+#search-container form{
+    width: 50%;
+    margin: 0 auto;
+}
+
+#events-container{
+    padding: 50px;
+}
+
+#events-container h2 .subtitle{
+    color: #757575;
+    margin-bottom: 30px;
+}
+
+#cards-container{
+    display: flex;
+}
+
+#events-container .card{
+    flex: 0 0 1;
+    max-width: 50%;
+    border-radius: 10px;
+    padding: 0;
+    margin: 5px;
+
+}
+
+.image-fluid{
+    width: 500px;
+}
