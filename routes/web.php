@@ -16,7 +16,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [EventController::class, 'index'])->name('site.home');
 
-Route::get('events/create', [EventController::class, 'create'])->name('site.create');
-Route::post('events/create', [EventController::class, 'store'])->name('site.create.post');
+Route::get('events/create', [EventController::class, 'create'])->name('site.create')->middleware('auth');
+Route::post('events/create', [EventController::class, 'store'])->name('site.create.post')->middleware('auth');
 
 Route::get('events/show/{event}', [EventController::class, 'show'])->name('site.show');
+
+Route::get('dashboard', [EventController::class, 'dashboard'])->name('site.dashboard')->middleware('auth');
+Route::delete('events/delete/{event}', [EventController::class, 'destroy'])->name('site.delete')->middleware('auth');
+
+Route::get('events/edit/{event}', [EventController::class, 'edit'])->name('site.update')->middleware('auth');
+Route::put('events/edit/{event}', [EventController::class, 'update'])->name('site.update.edit')->middleware('auth');
+
+Route::post('events/join/{event}', [EventController::class, 'joinEvent'])->name('site.join.event')->middleware('auth');
+
+Route::delete('events/leave/{event}', [EventController::class, 'leaveEvent'])->name('site.leave.event')->middleware('auth');

@@ -92,3 +92,15 @@ header{
 .image-fluid{
     width: 500px;
 }
+#btn3{
+    color: blue;
+}
+
+.dashboard-events-container form{
+    display: inline-block;
+}
+
+.img-preview{
+    width: 100px;
+    
+}
