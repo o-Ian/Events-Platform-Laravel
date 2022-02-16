@@ -25,7 +25,7 @@
                 <img src="{{ asset('img/events/'.$event->image) }}" alt="{{ $event->title }}">
                 <p class="card-date">{{  date('d/m/Y', strtotime($event->date ))}}</p>
                 <h5 class="card-title">{{ $event->title }}</h5>
-                <p class="card-participants">X participantes</p>
+                <p class="card-participants">{{ count($event->users) }} participantes</p>
                 <a href="{{ route('site.show', ['event' => $event]) }}" class="btn btn-primary">Saber mais</a>
             </div>
         @endforeach

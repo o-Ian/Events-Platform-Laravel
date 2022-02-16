@@ -36,7 +36,7 @@
                     </li>
                     @auth
                     <li class="nav-item">
-                        <a href="dashboard" class="nav-link">Meus eventos</a>
+                        <a href="{{ route('site.dashboard') }}" class="nav-link">Meus eventos</a>
                     </li>
                     <li class="nav-item">
                         <form action="/logout" method="POST">

@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -28,6 +27,16 @@ class User extends Authenticatable
         'email',
         'password',
     ];
+
+    public function events()
+    {
+        return $this->hasMany(Event::class);
+    }
+
+    public function eventsAsParticipant()
+    {
+        return $this->belongsToMany(Event::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
